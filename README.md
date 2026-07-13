@@ -2,8 +2,8 @@
 <head>
     <style>
         body {
-            background-color: rgba(33, 48, 255, 0.74);
-            background-image: url(https://cdn.prod.website-files.com/620f1db54643ffbb1dd9054e/62a0787068535a1140959805_background%20(1).png);
+            background-color: rgba(120, 100, 247, 0.74);
+            background-image: url();
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -34,6 +34,9 @@
             font-family: Georgia, serif;
             font-weight: bold;
             justify-content: space-between;
+            border-radius: 10px;
+            border: solid 2px #281154;
+            margin-bottom: 10px;
         }
         .content
         {
@@ -45,6 +48,7 @@
           padding: 5px;
           position: absolute;
           top: 10%;
+          border-radius: 10px;
         }
         .poster {
             border-radius: 30px;
@@ -55,9 +59,15 @@
 <html>
   <body>
     <div class="topbar">
-        <p style="color: white;">PastelNetOS</p>
-        <p style="color: white;">7/12/2024 9:23PM</p>
+        <p style="color: white; margin: 0;">PastelNetOS</p>
+        <p style="color: white; margin: 0;">7/12/2026, 9:23PM</p>
+        <p style="color: white;">Ready to load!</p>
     </div>
+    <script>
+        set Interval (function () {
+                document.querySelector("#timeElement").innerHTML = new Date().toLocaleString():
+        }, 1000);
+    </script>
     <div class="content">
     <br>
         <h1 style="color: black;">Welcome to my Personal OS, PastelNet.</h1>
