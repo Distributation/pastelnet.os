@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <script type="module" src="script.js"></script>
     <style>
         h1 {
             font-size: 28px;
@@ -18,13 +19,6 @@
         br {
             user-select: none;
         }
-        button {
-            font-family: Impact, fantasy;
-            font-size: 20px;
-            height: 70px;
-            width: 300px;
-            color: red;
-        }
         img {
             user-select: none;
         }
@@ -35,7 +29,6 @@
             padding: 10px;
             margin: 0;
             background-color: rgba(33, 48, 255, 0.2);
-            font-family: Georgia, serif;
             font-weight: bold;
             justify-content: space-between;
             margin-bottom: 5px;
@@ -43,23 +36,35 @@
         }
         .handle {
             display: flex;
-            background-color: antiquewhite;
+            background-color: #fce398;
             padding: 8px;
             margin: 0;
-            border-bottom: 6px solid #c08d56;
+            border-bottom: 4px solid #c08d56;
             border-radius: 5px 5px 0 0;
             justify-content: space-between;
         }
         .handle:hover {
             cursor: move;
             background-color: #fce398;
-            border-bottom: 6px solid #c08d56;
+            border-bottom: 4px solid #c08d56;
             justify-content: space-between;
+        }
+        .cancelbutton {
+            color: rgb(157, 101, 24);
+            background-color: #eec09e;
+            border-radius: 2px;
+            padding: 5px;
+            font-size: 13px;
+            margin: 0;
+            cursor: pointer;
+        }
+        .cancelbutton:hover {
+            background-color: #cfa282;
         }
         .content {
           text-align: center;
           background-color: #fffaed;
-          border: 6px solid #c08d56;
+          border: 4px solid #c08d56;
           height: 1;
           width: 600px;
           position: absolute;
@@ -70,7 +75,7 @@
           user-select: none;
         }
         .poster {
-            border-radius: 30px;
+            border-radius: 10px;
             width: 300px;
         }
         .text {
@@ -82,37 +87,27 @@
 <html>
   <body>
     <div class="topbar">
-        <p style="color: white; margin: 0;">PastelNetOS</p>
+        <p id="welcomeopen" style="color: white; margin: 0; cursor: pointer;">PastelNetOS</p>
         <p id="timeElement" style="color: white; margin: 0;">Time</p>
         <p style="color: white; margin: 0;">Ready to load!</p>
     </div>
-<script src="script.js">
-</script>
     <div id="Welcome">
     </div>
     <div class="content" id="welcome">
         <div class="handle" id="welcomeheader">
-            <p style="margin: 0;">Welcome</p>
-            <p style="margin: 0;">Cancel</p>
+            <p style="padding: 4px;">Welcome Panel</p>
+            <p id="welcomeclose" class="cancelbutton">Cancel</p>
         </div>
         <div class="text">
-        <h1 style="color: black;">Welcome to my Personal OS, PastelNet.</h1>
             <br>
-            <p style="background-color: #fcedba; color: black;">Hello world! This is a new dev project.</p>
+            <h1 style="color: black;">Welcome to my Personal OS, PastelNet.</h1>
             <br>
-            <p style="font-family: Courier, monospace;">this is my personal OS that I created for <b>Hack Club Stardance.</b>
-            <br>
-            <br>I will update this theme to create a 90's net inspired OS with custom applications and features.
+            <p style="font-family: Courier, monospace;">this is my personal OS that I created for <b>Hack Club Stardance.</b> I will update this theme to create a 90's net inspired OS with custom applications and features.
             <br>
             <br>Thank you for checking out my project while it is in it's first development stage!
             <br><br>
             <img class="poster" src="https://i.pinimg.com/1200x/aa/6f/46/aa6f46d908409a656f2aee90b611bc74.jpg">
             <br>
-            <br>
-            <p>
-            this is some example text.
-            </p>
-            <button>Click here for infinite Robux!</button>
             <br>
         </div>
   </body>

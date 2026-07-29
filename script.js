@@ -58,3 +58,27 @@ if (document.getElementById(elmnt.id + "header")) {
 	// otherwise, move the DIV from anywhere inside the DIV:
 	elmnt.onmousedown = dragMouseDown;
 }
+
+
+
+var welcomeScreen = document.querySelector("#welcome")
+
+function openWindow(element) {
+  element.style.display = "block"
+}
+
+function closeWindow(element) {
+  element.style.display = "none"
+}
+
+var welcomeScreenClose = document.querySelector("#welcomeclose")
+
+var welcomeScreenOpen = document.querySelector("#welcomeopen")
+
+welcomeScreenClose.addEventListener("click", function() {
+  closeWindow(welcomeScreen);
+});
+
+welcomeScreenOpen.addEventListener("click", function() {
+  openWindow(welcomeScreen);
+});
