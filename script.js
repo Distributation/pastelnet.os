@@ -51,10 +51,52 @@ function dragElement(elmnt) {
   }
 }
 
+
+dragElement(document.getElementById("welcome"));
+
+dragElement(document.querySelector("#userMenu"));
+
 if (document.getElementById(elmnt.id + "header")) {
 	// if present, the header is where you move the DIV from:
 	document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
 } else {
 	// otherwise, move the DIV from anywhere inside the DIV:
 	elmnt.onmousedown = dragMouseDown;
+}
+
+
+
+function selectIcon(element) {
+  element.classList.add("appIcon");
+  selectedIcon = element
+} 
+
+function selectIcon(element) {
+  element.classList.add("appIcon");
+  selectedIcon = element
+} 
+
+function handleIconTap(element) {
+  if (condition) {
+    functionA(element)
+  } else {
+    functionB(element)
+  }
+}
+
+
+var topBar = document.querySelector("#top")
+
+function openWindow(element) {
+  element.style.display = "flex";
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+}
+
+function handleWindowTap(element) {
+  biggestIndex++;  // Increment biggestIndex by 1
+  element.style.zIndex = biggestIndex;
+  topBar.style.zIndex = biggestIndex + 1;
+  deselectIcon(selectedIcon)
 }
